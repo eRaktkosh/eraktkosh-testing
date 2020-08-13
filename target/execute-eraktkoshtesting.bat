@@ -1,0 +1,1 @@
+java -jar D:\Project\EclipseWorkspace\CDAC\eRaktkosh_selenium\eraktkosh-testing\target\eraktkosh-testing-0.0.1-SNAPSHOT-shaded.jar

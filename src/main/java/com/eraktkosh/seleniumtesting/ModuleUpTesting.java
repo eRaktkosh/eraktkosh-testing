@@ -11,6 +11,8 @@ public class ModuleUpTesting {
 	
 	@Test
 	public void moduleUpTesting() throws InterruptedException {
+		WebDriver driver = null;
+		try {
 		// TODO Auto-generated method stub
 		
 		//To Access via Chrome
@@ -19,7 +21,7 @@ public class ModuleUpTesting {
 		
 		//To Access via FireFox
 		System.setProperty("webdriver.gecko.driver", "D:\\Project\\EclipseWorkspace\\CDAC\\eRaktkosh_selenium\\geckodriver-v0.27.0\\geckodriver.exe");
-		WebDriver driver=new FirefoxDriver();
+		driver=new FirefoxDriver();
 		
 		driver.get("http://10.10.10.78:8380/eRaktKosh/hissso/loginLogin");
 		driver.manage().window().maximize();
@@ -58,6 +60,12 @@ public class ModuleUpTesting {
 		*/
 		System.out.println(driver.getTitle());
 		driver.close();
+		
+		
+			
+		} finally {
+			driver.close();
+		}
 	}
 	//*[@id="Online_Requistion_Raising"]
 
