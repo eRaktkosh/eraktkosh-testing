@@ -13,15 +13,15 @@ public class ModuleUpTesting {
 	public void moduleUpTesting() throws InterruptedException {
 		WebDriver driver = null;
 		try {
-		// TODO Auto-generated method stub
 		
-		//To Access via Chrome
-		//System.setProperty("webdriver.chrome.driver", "G:\\Work\\chromedriver_win32\\chromedriver.exe");
-		//WebDriver driver=new ChromeDriver();
+		//To Access via chrome
+		System.setProperty("webdriver.chrome.driver", "D:\\Project\\EclipseWorkspace\\CDAC\\eRaktkosh_selenium\\chromedriver_win32\\chromedriver.exe");
+		driver=new ChromeDriver();
 		
 		//To Access via FireFox
-		System.setProperty("webdriver.gecko.driver", "D:\\Project\\EclipseWorkspace\\CDAC\\eRaktkosh_selenium\\geckodriver-v0.27.0\\geckodriver.exe");
-		driver=new FirefoxDriver();
+		//System.setProperty("webdriver.gecko.driver", "D:\\Project\\EclipseWorkspace\\CDAC\\eRaktkosh_selenium\\geckodriver-v0.27.0\\geckodriver.exe");
+		//driver=new FirefoxDriver();
+		   
 		
 		driver.get("http://10.10.10.78:8380/eRaktKosh/hissso/loginLogin");
 		driver.manage().window().maximize();
@@ -46,26 +46,36 @@ public class ModuleUpTesting {
 		driver.findElement(By.xpath("/html/body/form/div[1]/div[3]/div[1]/div/div/ul/li[2]/a")).click();
 		Thread.sleep(waittime);
 		driver.switchTo().frame(driver.findElement(By.id("frmMainMenu")));
-		driver.findElement(By.xpath("//*[@id=\'Donor_Registration\']")).click();
+		//driver.findElement(By.xpath("//*[@id=\'Donor_Registration\']")).click();
+		driver.findElement(By.xpath("//*[@id=\'Donor_Registration_New\']")).click();
+		// //*[@id="Donor_Registration_New"]
 		Thread.sleep(waittime);
 		driver.switchTo().defaultContent();
 		//myTabDrop1
 		driver.findElement(By.id("myTabDrop1")).click();
 		Thread.sleep(waittime);
+		driver.findElement(By.xpath("//*[@id=\'myTabDrop1-contents\']/li[4]/a")).click();
+		// //*[@id="myTabDrop1-contents"]/li[4]/a
 		
-		/*driver.findElement(By.xpath("/html/body/form/div[1]/div[3]/div[1]/div/div/ul/li[10]/ul/li[3]/a")).click();
+		// //*[@id="myTabDrop1-contents"]/li[8]/a
+		// /html/body/form/div[1]/div[3]/div[1]/div/div/ul/li[5]/ul/li[8]/a
+		// //*[@id="menuList"]/li[8]/a 
+		
+		// /html/body/form/div[1]/div[3]/div[1]/div/div/ul/li[8]/a
+		// /html/body/form/div[1]/div[3]/div[1]/div/div/ul/li[5]/ul/li[8]/a
 		Thread.sleep(waittime);
 		driver.switchTo().frame(driver.findElement(By.id("frmMainMenu")));
+		Thread.sleep(waittime);
 		driver.findElement(By.xpath("//*[@id=\'Cash_Collection_Desk\']")).click();
-		*/
 		System.out.println(driver.getTitle());
-		driver.close();
+		//driver.close();
+		//driver.quit();
 		
-		
-			
-		} finally {
-			driver.close();
-		}
+		}catch (Exception e){
+	       System.out.println("Caught message " + e.getMessage());
+	       //driver.close();
+	       //driver.quit();
+	    }
 	}
 	//*[@id="Online_Requistion_Raising"]
 

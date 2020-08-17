@@ -111,18 +111,24 @@
   <dependencies>
   	
   	<!-- https://mvnrepository.com/artifact/junit/junit -->
-	<dependency>
+	<!-- <dependency>
 	    <groupId>junit</groupId>
 	    <artifactId>junit</artifactId>
 	    <version>4.13</version>
-	    <!-- <scope>test</scope> -->
-	</dependency>
+	    <scope>test</scope>
+	</dependency> -->
 	
   	<dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
         <version>3.141.59</version>
     </dependency>
+    
+    <!-- <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-server</artifactId>
+        <version>3.141.59</version>
+    </dependency> -->
     
 	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 	<dependency>
@@ -131,7 +137,31 @@
 	    <version>7.3.0</version>
 	    <!-- <scope>test</scope> -->
 	</dependency>
-	    
+	
+	
+	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.3</version>
+</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.3</version>
+</dependency>
+	
+	
+	<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+	<!-- <dependency>
+	    <groupId>com.relevantcodes</groupId>
+	    <artifactId>extentreports</artifactId>
+	    <version>2.41.2</version>
+	</dependency>
+		 -->
+	 
     
   </dependencies>
    

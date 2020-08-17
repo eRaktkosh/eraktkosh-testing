@@ -27,3 +27,8 @@ hs_err_pid*
 /.settings/
 
 /target/classes
+target/surefire-reports/
+
+target/maven-status/
+
+test-output/
