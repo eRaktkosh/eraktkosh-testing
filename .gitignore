@@ -32,3 +32,5 @@ target/surefire-reports/
 target/maven-status/
 
 test-output/
+
+target/
